@@ -1,0 +1,53 @@
+<div class="main_container">
+  <div class="totalcount_container">
+    <label>Total Items :</label>&nbsp;
+    <span>{{ count }}</span>
+  </div>
+  <div class="right-container">
+  <div class="first_container">
+    <span class="items__nos">
+      <div class="form-group page__section">
+        <label for="pageNo">Items per page:</label>&nbsp;
+        <select
+          class="form-control"
+          [(ngModel)]="selectedItemsPerPage"
+          id="pageNo"
+          (ngModelChange)="changeItemPerPage($event)"
+        >
+          <option
+            *ngFor="let perpageVal of itemsPerPageList"
+            [value]="perpageVal"
+            >{{ perpageVal }}</option
+          >
+        </select>
+      </div>
+    </span>
+  </div>
+
+  <div class="second_container">
+    <span class="visible__page">
+      <span>Showing</span>&nbsp;<span>1</span> -
+      <span>{{ pagesToShow }} </span> of <span> {{ currentPage }} </span>
+    </span>
+  </div>
+
+  <div class="third_container">
+    <span class="page__selection">
+      <a class="icons"
+        ><span
+          class=" icon icon_arrow_thick_left"
+          [class.disabled]="currentPage === 1"
+          (click)="currentPage === 1 || onPrev()"
+          ><i class="fa fa-chevron-left"></i></span
+      ></a>
+      <a class="icons"
+        ><span
+          class=" icon icon_arrow_thick_right"
+          [class.disabled]="currentPage === pagesToShow"
+          (click)="currentPage === pagesToShow || onNext()"
+          ><i class="fa fa-chevron-right"></i></span
+      ></a>
+    </span>
+  </div>
+</div>
+</div>

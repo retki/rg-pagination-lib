@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "rg-pagination-lib": {
+      "root": "projects/rg-pagination-lib",
+      "sourceRoot": "projects/rg-pagination-lib/src",
+      "projectType": "library",
+      "prefix": "rg",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/rg-pagination-lib/tsconfig.lib.json",
+            "project": "projects/rg-pagination-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rg-pagination-lib/src/test.ts",
+            "tsConfig": "projects/rg-pagination-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/rg-pagination-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rg-pagination-lib/tsconfig.lib.json",
+              "projects/rg-pagination-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "rg-pagination-lib-app"
