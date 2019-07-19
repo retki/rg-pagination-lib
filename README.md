@@ -78,4 +78,23 @@ export class AppComponent {
 ```
 5. Final Result looks like 
 
-![Alt Text](url)
+![Look of rg-pagination](https://github.com/renu0627/rg-pagination-lib/blob/master/src/assets/rg-pagination.png)
+
+
+Params
+===
+
+ Name| Type | Description
+------------ | -------------
+currentPage | Number | Shows which page is currently opened from PageList
+count | Number | Shows Total Count of items present 
+pagesToShow | Number | Shows PageList derived from ```selectedItemPerPage``` and ```count```
+itemsPerPageList | Number [] | Shows List of Items Per Page
+selectedItemPerPage | Number | Shows selected Items Per Page
+goPrev | fn() | Click on Previous Arrow will call this function
+goNext | fn() | Click on Next Arrow will call this function
+goToItemPerPage | fn() | Click on ItemsPerPage List will call this function 
+
+
+Happy Coding ! :stuck_out_tongue_closed_eyes:
+===

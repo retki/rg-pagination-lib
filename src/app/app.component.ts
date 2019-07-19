@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public currentPage = 1;
   public count = 100;
-  public perPage = 1;
+  // public perPage = 1;
   public pagesToShow = 1;
   public selectedItemPerPage;
   public itemsPerPageList = [10, 20, 50, 100, 500];
