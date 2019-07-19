@@ -78,6 +78,8 @@ export class AppComponent {
 
 ![Look of rg-pagination](https://github.com/renu0627/rg-pagination-lib/blob/master/src/assets/rg-pagination.png)
 
+```Total Items: {{ count }}      Items per page: {{ selectedItemsPerPage }}   Showing 1  -  {{ pagesToShow }}  of  {{ currentPage }} ```
+
 
 Params
 ===
