@@ -53,14 +53,14 @@ import { RgPaginationLibModule } from 'rg-pagination-lib';
   (goToItemPerPage)="goToItemPerPage($event)"
 ></rg-pagination>
 ```
-4. In ```app.component.ts`` , add the following 
+4. In ```app.component.ts``` , add the following 
 
 ```
 export class AppComponent {
-  public currentPage = 1; //default value
-  public count = 100; //default value
-  public perPage = 1; //default value
-  public pagesToShow = 1; //default value
+  public currentPage = 1; 
+  public count = 100; 
+  public perPage = 1; 
+  public pagesToShow = 1; 
   public selectedItemPerPage;
   public itemsPerPageList = [10, 20, 50, 100, 500]; //default value
   title = 'lib-tester';
@@ -85,7 +85,7 @@ Params
 ===
 
  Name| Type | Description
------------- | -------------
+------------ | ------------- | -------------
 currentPage | Number | Shows which page is currently opened from PageList
 count | Number | Shows Total Count of items present 
 pagesToShow | Number | Shows PageList derived from ```selectedItemPerPage``` and ```count```
