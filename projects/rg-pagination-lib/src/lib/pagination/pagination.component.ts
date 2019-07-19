@@ -10,12 +10,13 @@ export class PaginationComponent implements OnInit {
 
   selectedItemsPerPage = 10;
   totalPages = 1;
+  pagesToShow = 1;
   // input imported
   @Input() currentPage: number; // the current page
   @Input() count: number; // how many total items there are in all pages
   // @Input() perPage: number; // how many items we want to show per page
-  @Input() pagesToShow: number; // how many pages between next/prev
-  @Input() loading: boolean;
+  // @Input() pagesToShow: number; // how many pages between next/prev
+  // @Input() loading: boolean;
   @Input()  itemsPerPageList: number[];
   @Input() selectedItemPerPage: number; // check if content is being loaded
   // output imported
