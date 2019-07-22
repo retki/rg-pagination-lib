@@ -55,7 +55,7 @@ import { RgPaginationLibModule } from 'rg-pagination-lib';
 export class AppComponent {
   public currentPage = 1; 
   public count = 100; 
-  public selectedItemPerPage;
+  public selectedItemPerPage; //default value is 10
   public itemsPerPageList = [10, 20, 50, 100, 500]; //default value
   title = 'app-component';
   goToItemPerPage(event) {
@@ -84,7 +84,7 @@ Params
 ------------ | ------------- | -------------
 currentPage | Number | Shows which page is currently opened from PageList
 count | Number | Shows Total Count of items present 
-pagesToShow | Number | Shows PageList derived automatically from ```selectedItemPerPage```/```count``` (i.e., Pages between ```Previous``` and ```Next```)
+pagesToShow | Number | Shows PageList derived automatically from ```selectedItemPerPage```/```count``` (i.e., Pages between ```Previous``` and ```Next```) (Reference purpose)
 itemsPerPageList | Number [ ] | Shows List of Items Per Page
 selectedItemPerPage | Number | Shows selected Items Per Page
 goPrev | fn() | Click on Previous Arrow will call this function
