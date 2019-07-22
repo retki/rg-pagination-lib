@@ -35,6 +35,11 @@ Steps to Follow
 2. Import ```rg-pagination-lib``` module in ```app.module.ts``` file.
 ```
 import { RgPaginationLibModule } from 'rg-pagination-lib';
+
+imports: [
+  ...,
+    RgPaginationLibModule
+  ],
 ```
 3. In ```app.component.html``` , add the following 
 
@@ -72,7 +77,7 @@ export class AppComponent {
 ```
 5. Final Result looks like 
 
-![Look of rg-pagination](https://github.com/renu0627/rg-pagination-lib/blob/master/src/assets/rg-pagination.png)
+![Look of rg-pagination](https://raw.githubusercontent.com/renu0627/rg-pagination-lib/master/src/assets/rg-pagination.png)
 
 ```Total Items: {{ count }}      Items per page: {{ selectedItemsPerPage }}   Showing 1  -  {{ pagesToShow }}  of  {{ currentPage }} ```
 
