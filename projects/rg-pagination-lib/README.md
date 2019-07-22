@@ -1,24 +1,96 @@
-# RgPaginationLib
+Pagination (Angular)
+===
+Simple-2-use custom made pagination component for angular.
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+Installation
+====
+Install rg-pagination-lib with npm:
+```
+$ npm install --save rg-pagination-lib
+```
 
-## Code scaffolding
+Usage
+===
+```
+<rg-pagination
+  [currentPage]="currentPage"
+  [count]="count"
+  [itemsPerPageList]="itemsPerPageList"
+  [selectedItemPerPage]="selectedItemPerPage"
+  (goPrev)="goToPrev()"
+  (goNext)="goToNext()"
+  (goToItemPerPage)="goToItemPerPage($event)"
+></rg-pagination>
 
-Run `ng generate component component-name --project rg-pagination-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project rg-pagination-lib`.
-> Note: Don't forget to add `--project rg-pagination-lib` or else it will be added to the default project in your `angular.json` file. 
+```
+Steps to Follow 
+===
+1. Add below link in ```index.html``` file.
+```
+ <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+```
+2. Import ```rg-pagination-lib``` module in ```app.module.ts``` file.
+```
+import { RgPaginationLibModule } from 'rg-pagination-lib';
+```
+3. In ```app.component.html``` , add the following 
 
-## Build
+```
+<rg-pagination
+  [currentPage]="currentPage"
+  [count]="count"
+  [itemsPerPageList]="itemsPerPageList"
+  [selectedItemPerPage]="selectedItemPerPage"
+  (goPrev)="goToPrev()"
+  (goNext)="goToNext()"
+  (goToItemPerPage)="goToItemPerPage($event)"
+></rg-pagination>
+```
+4. In ```app.component.ts``` , add the following 
 
-Run `ng build rg-pagination-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+export class AppComponent {
+  public currentPage = 1; 
+  public count = 100; 
+  public selectedItemPerPage; //default value is 10
+  public itemsPerPageList = [10, 20, 50, 100, 500]; //default value
+  title = 'app-component';
+  goToItemPerPage(event) {
+    this.selectedItemPerPage = event;
+  }
+  goToPrev() {
+      console.log('IN Previous');
+  }
+  goToNext() {
+      console.log('IN Next');
 
-## Publishing
+  }
+}
+```
+5. Final Result looks like 
 
-After building your library with `ng build rg-pagination-lib`, go to the dist folder `cd dist/rg-pagination-lib` and run `npm publish`.
+![Look of rg-pagination](https://github.com/renu0627/rg-pagination-lib/blob/master/src/assets/rg-pagination.png)
 
-## Running unit tests
+```Total Items: {{ count }}      Items per page: {{ selectedItemsPerPage }}   Showing 1  -  {{ pagesToShow }}  of  {{ currentPage }} ```
 
-Run `ng test rg-pagination-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
+Params
+===
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ Name| Type | Description
+------------ | ------------- | -------------
+currentPage | Number | Shows which page is currently opened from PageList
+count | Number | Shows Total Count of items present 
+pagesToShow | Number | Shows PageList derived automatically from ```selectedItemPerPage```/```count``` (i.e., Pages between ```Previous``` and ```Next```) (Reference purpose)
+itemsPerPageList | Number [ ] | Shows List of Items Per Page
+selectedItemPerPage | Number | Shows selected Items Per Page
+goPrev | fn() | Click on Previous Arrow will call this function
+goNext | fn() | Click on Next Arrow will call this function
+goToItemPerPage | fn() | Click on ItemsPerPage List will call this function 
+
+
+Happy Coding ! :stuck_out_tongue_closed_eyes:
+===
