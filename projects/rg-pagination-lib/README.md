@@ -25,14 +25,14 @@ Usage
 ```
 Steps to Follow 
 ===
-1. Add below link in ```index.html``` file.
+* Add below link in ```index.html``` file.
 ```
  <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 ```
-2. Import ```rg-pagination-lib``` module in ```app.module.ts``` file.
+* Import ```rg-pagination-lib``` module in ```app.module.ts``` file.
 ```
 import { RgPaginationLibModule } from 'rg-pagination-lib';
 
@@ -41,7 +41,7 @@ imports: [
     RgPaginationLibModule
   ],
 ```
-3. In ```app.component.html``` , add the following 
+* In ```app.component.html``` , add the following 
 
 ```
 <rg-pagination
@@ -54,7 +54,7 @@ imports: [
   (goToItemPerPage)="goToItemPerPage($event)"
 ></rg-pagination>
 ```
-4. In ```app.component.ts``` , add the following 
+* In ```app.component.ts``` , add the following 
 
 ```
 export class AppComponent {
@@ -75,7 +75,7 @@ export class AppComponent {
   }
 }
 ```
-5. Final Result looks like 
+* Final Result looks like 
 
 ![Look of rg-pagination](https://raw.githubusercontent.com/renu0627/rg-pagination-lib/master/src/assets/rg-pagination.png)
 
